@@ -82,120 +82,118 @@ public class RetirementController implements Initializable {
 		{
 			Integer.parseInt(this.txtYearsToWork.getText());
 		}
-			catch(Exception e)
-			{
-				Alert alert = new Alert(AlertType.WARNING);
-	            alert.setTitle("Incorrect Data Type");
-	            alert.setHeaderText("Incorrect Data Type");
-	            alert.setContentText("Please Provade an integer for \"Years To Work\".");
+		catch(Exception e)
+		{
+			Alert alert = new Alert(AlertType.WARNING);
+	        alert.setTitle("Incorrect Data Type");
+	        alert.setHeaderText("Incorrect Data Type");
+	        alert.setContentText("Please Provade an integer for \"Years To Work\".");
 
-	            alert.showAndWait();
-			}
-			try 
-			{
-				Double.parseDouble(this.txtAnnualReturn1.getText());
-			}
-			catch(Exception e)
-			{
-				Alert alert = new Alert(AlertType.WARNING);
-	            alert.setTitle("Incorrect Data Type");
-	            alert.setHeaderText("Incorrect Data Type");
-	            alert.setContentText("Please Provade a Double for the first \"Annual Return\".");
+	        alert.showAndWait();
+		}
+		try 
+		{
+			Double.parseDouble(this.txtAnnualReturn1.getText());
+		}
+		catch(Exception e)
+		{
+			Alert alert = new Alert(AlertType.WARNING);
+	        alert.setTitle("Incorrect Data Type");
+	        alert.setHeaderText("Incorrect Data Type");
+	        alert.setContentText("Please Provade a Double for the first \"Annual Return\".");
 
-	            alert.showAndWait();
-			}
-			try 
-			{
-				Integer.parseInt(this.txtYearsRetired.getText());
-			}
-			catch(Exception e)
-			{
-				Alert alert = new Alert(AlertType.WARNING);
-	            alert.setTitle("Incorrect Data Type");
-	            alert.setHeaderText("Incorrect Data Type");
-	            alert.setContentText("Please Provade an integer for \"Years Retired\".");
+	        alert.showAndWait();
+		}
+		try 
+		{
+			Integer.parseInt(this.txtYearsRetired.getText());
+		}
+		catch(Exception e)
+		{
+			Alert alert = new Alert(AlertType.WARNING);
+	        alert.setTitle("Incorrect Data Type");
+	        alert.setHeaderText("Incorrect Data Type");
+	        alert.setContentText("Please Provade an integer for \"Years Retired\".");
 
-	            alert.showAndWait();
-			}
-			try 
-			{
-				Double.parseDouble(this.txtAnnualReturn2.getText());
-			}
-			catch(Exception e)
-			{
-				Alert alert = new Alert(AlertType.WARNING);
-	            alert.setTitle("Incorrect Data Type");
-	            alert.setHeaderText("Incorrect Data Type");
-	            alert.setContentText("Please Provade a double for the second \"Annual Return\".");
+	        alert.showAndWait();
+		}
+		try 
+		{
+			Double.parseDouble(this.txtAnnualReturn2.getText());
+		}
+		catch(Exception e)
+		{
+			Alert alert = new Alert(AlertType.WARNING);
+	        alert.setTitle("Incorrect Data Type");
+	        alert.setHeaderText("Incorrect Data Type");
+	        alert.setContentText("Please Provade a double for the second \"Annual Return\".");
 
-	            alert.showAndWait();
-			}
-			try 
-			{
-				Double.parseDouble(this.txtRequiredIncome.getText());
-			}
-			catch(Exception e)
-			{
-				Alert alert = new Alert(AlertType.WARNING);
-	            alert.setTitle("Incorrect Data Type");
-	            alert.setHeaderText("Incorrect Data Type");
-	            alert.setContentText("Please Provade a double for the second \"Required Income\".");
+	        alert.showAndWait();
+		}
+		try 
+		{
+			Double.parseDouble(this.txtRequiredIncome.getText());
+		}
+		catch(Exception e)
+		{
+			Alert alert = new Alert(AlertType.WARNING);
+	        alert.setTitle("Incorrect Data Type");
+	        alert.setHeaderText("Incorrect Data Type");
+	        alert.setContentText("Please Provade a double for the second \"Required Income\".");
 
-	            alert.showAndWait();
-			}
-			try 
-			{
-				Double.parseDouble(this.txtMonthlySSI.getText());
-			}
-			catch(Exception e)
-			{
-				Alert alert = new Alert(AlertType.WARNING);
-	            alert.setTitle("Incorrect Data Type");
-	            alert.setHeaderText("Incorrect Data Type");
-	            alert.setContentText("Please Provade a double for the second \"Monthly SSI\".");
+	        alert.showAndWait();
+		}
+		try 
+		{
+			Double.parseDouble(this.txtMonthlySSI.getText());
+		}
+		catch(Exception e)
+		{
+			Alert alert = new Alert(AlertType.WARNING);
+	        alert.setTitle("Incorrect Data Type");
+	        alert.setHeaderText("Incorrect Data Type");
+	        alert.setContentText("Please Provade a double for the second \"Monthly SSI\".");
 
-	            alert.showAndWait();
-			}
+	        alert.showAndWait();
+		}
 			
-			if(Double.parseDouble(this.txtAnnualReturn2.getText())<0 || 
-			   Double.parseDouble(this.txtAnnualReturn2.getText())>0.03)
-			{
-				Alert alert = new Alert(AlertType.WARNING);
-	            alert.setTitle("Out Of Range");
-	            alert.setHeaderText("Out Of Range");
-	            alert.setContentText("Please use a range of 0-3% for annual return when in payback mode.");
+		if(Double.parseDouble(this.txtAnnualReturn2.getText())<0 || 
+		   Double.parseDouble(this.txtAnnualReturn2.getText())>0.03)
+		{
+			Alert alert = new Alert(AlertType.WARNING);
+	        alert.setTitle("Out Of Range");
+	        alert.setHeaderText("Out Of Range");
+	        alert.setContentText("Please use a range of 0-3% for annual return when in payback mode.");
 
-	            alert.showAndWait();
-			}
+	        alert.showAndWait();
+		}
 			
-			else if(Double.parseDouble(this.txtAnnualReturn1.getText())<0||
-					Double.parseDouble(this.txtAnnualReturn1.getText())>0.2)
-			{
-				Alert alert = new Alert(AlertType.WARNING);
-	            alert.setTitle("Out Of Range");
-	            alert.setHeaderText("Out Of Range");
-	            alert.setContentText("Please use a range of 0-20% for annual return when in investment mode.");
+		else if(Double.parseDouble(this.txtAnnualReturn1.getText())<0||
+				Double.parseDouble(this.txtAnnualReturn1.getText())>0.2)
+		{
+			Alert alert = new Alert(AlertType.WARNING);
+	        alert.setTitle("Out Of Range");
+	        alert.setHeaderText("Out Of Range");
+	        alert.setContentText("Please use a range of 0-20% for annual return when in investment mode.");
 
-	            alert.showAndWait();
-			}
+	        alert.showAndWait();
+		}
 			
-			else
-			{
-				Retirement r = new Retirement(Integer.parseInt(this.txtYearsToWork.getText()),
-						  					  Double.parseDouble(this.txtAnnualReturn1.getText()),
-						  					  Integer.parseInt(this.txtYearsRetired.getText()),
-						  					  Double.parseDouble(this.txtAnnualReturn2.getText()),
-						  					  Double.parseDouble(this.txtRequiredIncome.getText()),
-						  					  Double.parseDouble(this.txtMonthlySSI.getText()));
+		else
+		{
+			Retirement r = new Retirement(Integer.parseInt(this.txtYearsToWork.getText()),
+						  			      Double.parseDouble(this.txtAnnualReturn1.getText()),
+						  				  Integer.parseInt(this.txtYearsRetired.getText()),
+						  				  Double.parseDouble(this.txtAnnualReturn2.getText()),
+						  				  Double.parseDouble(this.txtRequiredIncome.getText()),
+						  				  Double.parseDouble(this.txtMonthlySSI.getText()));
 			
-				Double a1 = r.TotalAmountSaved();
-				Double a2 = r.AmountToSave();
+			Double a1 = r.TotalAmountSaved();
+			Double a2 = r.AmountToSave();
 				
-				this.lblTotalSave.setText(Double.toString(a1));	
-				this.lblSaveEachMonth.setText(Double.toString(a2));
+			this.lblTotalSave.setText(Double.toString(a1));	
+			this.lblSaveEachMonth.setText(Double.toString(a2));
 				//	TODO: Call AmountToSave and TotalAmountSaved and populate 
 		}
-	}
-	
-	
+	}		
 }
