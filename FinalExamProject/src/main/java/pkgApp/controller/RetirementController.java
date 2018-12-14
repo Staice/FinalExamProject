@@ -78,24 +78,10 @@ public class RetirementController implements Initializable {
 	@FXML
 	public void btnCalculate(ActionEvent event) {
 		
-		if(this.txtYearsToWork==null || this.txtAnnualReturn1==null ||
-		   this.txtYearsRetired==null || this.txtAnnualReturn2==null ||
-		   this.txtRequiredIncome==null || this.txtMonthlySSI==null)
+		try 
 		{
-			Alert alert = new Alert(AlertType.WARNING);
-            alert.setTitle("Empty TestField");
-            alert.setHeaderText("Empty TestField");
-            alert.setContentText("Please Provide all imformations needed.");
-
-            alert.showAndWait();
+			Integer.parseInt(this.txtYearsToWork.getText());
 		}
-		
-		else 
-		{
-			try 
-			{
-				Integer.parseInt(this.txtYearsToWork.getText());
-			}
 			catch(Exception e)
 			{
 				Alert alert = new Alert(AlertType.WARNING);
@@ -202,15 +188,14 @@ public class RetirementController implements Initializable {
 						  					  Double.parseDouble(this.txtRequiredIncome.getText()),
 						  					  Double.parseDouble(this.txtMonthlySSI.getText()));
 			
-				Double pv = r.TotalAmountSaved();
-				Double pmt = r.AmountToSave();
+				Double a1 = r.TotalAmountSaved();
+				Double a2 = r.AmountToSave();
 				
-				this.lblTotalSave.setText(String.format("%.2f", pv));	
-				this.lblSaveEachMonth.setText(String.format("%.2f", pmt));
-				
+				this.lblTotalSave.setText(Double.toString(a1));	
+				this.lblSaveEachMonth.setText(Double.toString(a2));
 				//	TODO: Call AmountToSave and TotalAmountSaved and populate 
-			}
 		}
 	}
+	
 	
 }
