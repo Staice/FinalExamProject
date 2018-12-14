@@ -85,9 +85,9 @@ public class RetirementController implements Initializable {
 		catch(Exception e)
 		{
 			Alert alert = new Alert(AlertType.WARNING);
-	        alert.setTitle("Incorrect Data Type");
-	        alert.setHeaderText("Incorrect Data Type");
-	        alert.setContentText("Please Provade an integer for \"Years To Work\".");
+	        alert.setTitle("The Data Type Is Wrong");
+	        alert.setHeaderText("The Data Type Is Wrong");
+	        alert.setContentText("Give an integer for \"Years To Work\".");
 
 	        alert.showAndWait();
 		}
@@ -98,9 +98,9 @@ public class RetirementController implements Initializable {
 		catch(Exception e)
 		{
 			Alert alert = new Alert(AlertType.WARNING);
-	        alert.setTitle("Incorrect Data Type");
-	        alert.setHeaderText("Incorrect Data Type");
-	        alert.setContentText("Please Provade a Double for the first \"Annual Return\".");
+	        alert.setTitle("The Data Type Is Wrong");
+	        alert.setHeaderText("The Data Type Is Wrong");
+	        alert.setContentText("Give a Double for the first \"Annual Return\".");
 
 	        alert.showAndWait();
 		}
@@ -111,9 +111,9 @@ public class RetirementController implements Initializable {
 		catch(Exception e)
 		{
 			Alert alert = new Alert(AlertType.WARNING);
-	        alert.setTitle("Incorrect Data Type");
-	        alert.setHeaderText("Incorrect Data Type");
-	        alert.setContentText("Please Provade an integer for \"Years Retired\".");
+	        alert.setTitle("The Data Type Is Wrong");
+	        alert.setHeaderText("The Data Type Is Wrong");
+	        alert.setContentText("Give an integer for \"Years Retired\".");
 
 	        alert.showAndWait();
 		}
@@ -124,9 +124,9 @@ public class RetirementController implements Initializable {
 		catch(Exception e)
 		{
 			Alert alert = new Alert(AlertType.WARNING);
-	        alert.setTitle("Incorrect Data Type");
-	        alert.setHeaderText("Incorrect Data Type");
-	        alert.setContentText("Please Provade a double for the second \"Annual Return\".");
+	        alert.setTitle("The Data Type Is Wrong");
+	        alert.setHeaderText("The Data Type Is Wrong");
+	        alert.setContentText("Give a double for the second \"Annual Return\".");
 
 	        alert.showAndWait();
 		}
@@ -137,9 +137,9 @@ public class RetirementController implements Initializable {
 		catch(Exception e)
 		{
 			Alert alert = new Alert(AlertType.WARNING);
-	        alert.setTitle("Incorrect Data Type");
-	        alert.setHeaderText("Incorrect Data Type");
-	        alert.setContentText("Please Provade a double for the second \"Required Income\".");
+	        alert.setTitle("The Data Type Is Wrong");
+	        alert.setHeaderText("The Data Type Is Wrong");
+	        alert.setContentText("Give a double for the second \"Required Income\".");
 
 	        alert.showAndWait();
 		}
@@ -150,9 +150,9 @@ public class RetirementController implements Initializable {
 		catch(Exception e)
 		{
 			Alert alert = new Alert(AlertType.WARNING);
-	        alert.setTitle("Incorrect Data Type");
-	        alert.setHeaderText("Incorrect Data Type");
-	        alert.setContentText("Please Provade a double for the second \"Monthly SSI\".");
+	        alert.setTitle("The Data Type Is Wrong");
+	        alert.setHeaderText("The Data Type Is Wrong");
+	        alert.setContentText("Give a double for the second \"Monthly SSI\".");
 
 	        alert.showAndWait();
 		}
@@ -161,9 +161,9 @@ public class RetirementController implements Initializable {
 		   Double.parseDouble(this.txtAnnualReturn2.getText())>0.03)
 		{
 			Alert alert = new Alert(AlertType.WARNING);
-	        alert.setTitle("Out Of Range");
-	        alert.setHeaderText("Out Of Range");
-	        alert.setContentText("Please use a range of 0-3% for annual return when in payback mode.");
+	        alert.setTitle("Invaild Range");
+	        alert.setHeaderText("Invaild Range");
+	        alert.setContentText("Use a range of 0-3% for annual return when in payback mode.");
 
 	        alert.showAndWait();
 		}
@@ -172,9 +172,9 @@ public class RetirementController implements Initializable {
 				Double.parseDouble(this.txtAnnualReturn1.getText())>0.2)
 		{
 			Alert alert = new Alert(AlertType.WARNING);
-	        alert.setTitle("Out Of Range");
-	        alert.setHeaderText("Out Of Range");
-	        alert.setContentText("Please use a range of 0-20% for annual return when in investment mode.");
+	        alert.setTitle("Invaild Range");
+	        alert.setHeaderText("Invaild Range");
+	        alert.setContentText("Use a range of 0-20% for annual return when in investment mode.");
 
 	        alert.showAndWait();
 		}
